@@ -20,7 +20,7 @@ client.on("message", (message) => {
 const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
 let texto = args.join(" ");
-if(command === 'decir'){
+if(command === 'hablar'){
     if(!texto) return message.channel.send(`Escriba un contenido pára decir.`);
     message.channel.send(texto);
     
@@ -34,6 +34,8 @@ if (message.content.startsWith(prefix + "hablar")) {
 });
 
 }
+
+
 if(message.content.startsWith(prefix + 'help')){
 
   message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
@@ -126,6 +128,8 @@ if(command === 'user'){
     
    message.channel.send({ embed });
   }
+
+
   
 }
 if(command === 'server'){
@@ -270,7 +274,7 @@ const embed = new Discord.RichEmbed()
     .setColor(0xff4d4d)
 
 message.channel.send(embed);
-  }
+}
 
 });
 client.login(config.token) ;
