@@ -1,0 +1,32 @@
+  if (message.content.startsWith(prefix +"La Mejor Historia de Alexisjr2" )){
+    const embed = new Discord.RichEmbed() 
+    .setTitle("Alexisjr2")
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .setColor(0x00AE86)
+    .setDescription("Era una Vez Un Pequeño mono llamado Alexisjr Que Salio de La Barriguita de Ingrid Luego Crecio se Caso y tuvo un hijo Alexisjr2 (Alexisjr2 No Es Mono)")
+    .setFooter("Alexisjr Alias (bebe) le Pica el Pie Izquierdo", client.user.avatarURL)
+    .setImage(message.author.avatarURL)
+    .setThumbnail(message.author.avatarURL)
+    .setTimestamp()
+    .setURL("https://github.com/CraterMaik")
+    .addField("Padre de Alexisjr2",
+      "AlexisJr (mono)")
+    .addField("Madre de Alexisjr", "Ingrid (Parre)", true)
+    .addBlankField(true)
+    .addField("VigAbuela", "Trina (MamiTrina)", true);
+    
+    message.channel.send({embed});
+}
+
+client.on("ready", () => {
+   console.log("Estoy listo!");
+   
+   client.user.setPresence( {
+       status: "online",
+       game: {
+           name: "help | crater",
+           type: "PLAYING"
+       }
+   } );
+
+});
